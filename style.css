@@ -15,6 +15,11 @@
   /* type */
   --headerText: "Fira Sans", sans-serif;
   --bodyText: "Merriweather", serif;
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --h4: 1.563rem;
+  --h4: 1.25rem;
 
   /* elevation */
 }
@@ -48,23 +53,23 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052rem;
+  font-size: var(--h1);
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: var(--h2);
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: var(--h3);
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: var(--h4);
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: var(--h5);
 }
 
 small,
