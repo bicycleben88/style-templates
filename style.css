@@ -7,8 +7,20 @@
 
 :root {
   /* define colors */
+  --darkGreen: #caf7e3;
+  --lightGreen: #edffec;
+  --lightPurlpe: #f6dfeb;
+  --darkPurple: #e4bad4;
+  --black: #0d0d0d;
+  --white: #fbfefe;
+  --red: #ff5470;
 
   /* define color intentions */
+  --primary: var(--darkPurple);
+  --accent: var(--lightPurple);
+  --background: var(--white);
+  --danger: var(--red);
+  --textColor: var(--black);
 
   /* style */
 
@@ -22,6 +34,10 @@
   --h4: 1.25rem;
 
   /* elevation */
+
+  /* positioning */
+  --headerHeight: 4rem;
+  --containerPadding: 2.5%;
 }
 
 html {
@@ -29,11 +45,32 @@ html {
 } /*20px*/
 
 body {
-  background: white;
+  background: var(--background);
   font-family: var(--bodyText);
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  color: var(--textColor);
+  padding-top: var(--headerHeight);
+}
+
+header {
+  --headerBackground: var(--darkPurple);
+  background-color: var(--headerBackground);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+header nav a + a {
+  padding-left: 10px;
 }
 
 p {
@@ -75,4 +112,17 @@ h5 {
 small,
 .text_small {
   font-size: 0.8rem;
+}
+
+.flex {
+  --justifyContent: space-between;
+  display: block;
+  justify-content: var(--justifyContent);
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 550px) {
+  .flex {
+    display: flex;
+  }
 }
