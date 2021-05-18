@@ -48,33 +48,33 @@
         <hr />
   
         <form>
-          <div>
+          <div class="grid cols-3">
+              <div>
+                <label for="text"> Text </label>
+                <input type="text" id="text" placeholder="Ben" />
+              </div>
+              <div>
+                <label for="number"> Number </label>
+                <input type="number" id="number" />
+              </div>
+              <div>
+                <label for="email"> Email </label>
+                <input type="email" id="email" />
+              </div>
             <div>
-              <label for="text"> Text </label>
-              <input type="text" id="text" placeholder="Ben" />
+              <label for="textarea"> Textarea </label>
+              <textarea id="textarea">Default Text</textarea>
             </div>
             <div>
-              <label for="number"> Number </label>
-              <input type="number" id="number" />
+              <label> Select </label>
+              <select name="select" id="select">
+                <option>Uno</option>
+                <option>Dos</option>
+                <option>Tres</option>
+              </select>
             </div>
-            <div>
-              <label for="email"> Email </label>
-              <input type="email" id="email" />
-            </div>
           </div>
-          <div>
-            <label for="textarea"> Textarea </label>
-            <textarea id="textarea">Default Text</textarea>
-          </div>
-          <div>
-            <label> Select </label>
-            <select name="select" id="select">
-              <option>Uno</option>
-              <option>Dos</option>
-              <option>Tres</option>
-            </select>
-          </div>
-          <div>
+          <div class="flex flex-around">
             <button>Submit</button>
             <button> Cancel</button>
             <button disabled>Disable</button>

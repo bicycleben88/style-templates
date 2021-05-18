@@ -143,6 +143,20 @@ small,
   flex-wrap: wrap;
 }
 
+.flex-around {
+  --justifyContent: space-around;
+}
+
+.grid {
+  --gridCols: 2;
+  display: block;
+  grid-template-columns: repeat(var(--gridCols), 1fr);
+}
+
+.cols-3 {
+  --gridCols: 3;
+}
+
 .layout {
   padding: calc(3em + var(--headerHeight)) var(--containerPadding);
 }
@@ -155,7 +169,12 @@ small,
   :root {
     --baseFontSize: 125%;
   }
+
   .flex {
     display: flex;
+  }
+
+  .grid {
+    display: grid;
   }
 }
