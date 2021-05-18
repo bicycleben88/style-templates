@@ -35,6 +35,13 @@
   --h4: 1.25rem;
 
   /* elevation */
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* positioning */
   --headerHeight: 3rem;
@@ -76,6 +83,20 @@ header nav a + a {
 
 p {
   margin-bottom: 1rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a {
+  text-decoration: none;
+  color: var(--black);
+  border-bottom: 2px solid var(--primary);
+}
+
+blockquote {
+  box-shadow: var(--level-1);
+  margin: 10px;
+  padding: 2em;
 }
 
 h1,
@@ -129,6 +150,7 @@ small,
 .logo {
   font-size: var(--baseFontSize);
 }
+
 @media only screen and (min-width: 550px) {
   :root {
     --baseFontSize: 125%;
